@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Wonda Shop",
+    "description": "Mobile native app for Wonda Shop",
+    "slug": "wonda-shop",
+    "privacy": "unlisted",
+    "sdkVersion": "34.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "assets/**"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.wonda.consumer.mobile.shop",
+      "supportsTablet": false,
+      "buildNumber": "1",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.wonda.consumer.mobile.shop",
+      "versionCode": 1,
+      "permissions": []
+    }
+  }
+}
