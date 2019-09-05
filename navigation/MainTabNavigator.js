@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import ExpoIcon from '../components/ExpoIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SignUpHomeScreen from '../containers/SignUp/';
+import LinksScreen from '../containers/LinksScreen';
+import SettingsScreen from '../containers/SettingsScreen';
 import colors from '../constants/colors';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Platform } from 'react-native';
@@ -14,32 +14,44 @@ const platformSpecificConfig = Platform.select({
   default: {},
 });
 
-const HomeStack = createStackNavigator(
+const SignUpStack = createStackNavigator(
   {
-    Home: HomeScreen,
+    SignUp: SignUpHomeScreen,
   },
   {
     ...platformSpecificConfig,
-    initialRouteName: 'Home',
+    initialRouteName: 'SignUp',
     defaultNavigationOptions: {
       headerTitle: 'Wonda Shop',
     },
   }
 );
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Farm',
-  tabBarIcon: ({ focused }) => (
-    <ExpoIcon
-      name="cow"
-      type="MaterialCommunityIcons"
-      color={focused ? colors.tabIconSelected : colors.tabIconDefault}
-      style={{ marginBottom: -3 }}
-    />
-  ),
+SignUpStack.navigationOptions = ({ navigation }) => {
+  const { routeName } = navigation.state.routes[navigation.state.index];
+  let tabBarVisible;
+
+  if (routeName === 'SignUp') {
+    tabBarVisible = false;
+  } else {
+    tabBarVisible = true;
+  }
+
+  return {
+    tabBarVisible,
+    tabBarLabel: 'Farm',
+    tabBarIcon: ({ focused }) => (
+      <ExpoIcon
+        name="cow"
+        type="MaterialCommunityIcons"
+        color={focused ? colors.tabIconSelected : colors.tabIconDefault}
+        style={{ marginBottom: -3 }}
+      />
+    ),
+  };
 };
 
-HomeStack.path = '';
+SignUpStack.path = '';
 
 const LinksStack = createStackNavigator(
   {
@@ -97,7 +109,7 @@ SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator(
   {
-    HomeStack,
+    HomeStack: SignUpStack,
     LinksStack,
     SettingsStack,
   },

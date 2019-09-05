@@ -7,5 +7,7 @@ export default {
     width,
     height,
   },
+  headerHeight: 64,
   isSmallDevice: width < 375,
+
 };

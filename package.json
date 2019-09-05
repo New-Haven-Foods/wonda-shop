@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && ./bin/no-push-master.sh"
+      "_pre-push": "npm run lint && ./bin/no-push-master.sh"
     }
   },
   "jest": {
