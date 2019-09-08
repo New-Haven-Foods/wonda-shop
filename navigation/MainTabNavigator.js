@@ -2,6 +2,11 @@
 
 import ExpoIcon from '../components/ExpoIcon';
 import SignUpHomeScreen from '../containers/SignUp/';
+import PromotionScreen from '../containers/SignUp/Promotion';
+import GuaranteeScreen from '../containers/SignUp/Guarantee';
+import PrivacyPolicyScreen from '../containers/SignUp/PrivacyPolicy';
+import AddAddressScreen from '../containers/SignUp/AddAddress';
+import CongratulationsScreen from '../containers/SignUp/Congratulations';
 import LinksScreen from '../containers/LinksScreen';
 import SettingsScreen from '../containers/SettingsScreen';
 import colors from '../constants/colors';
@@ -17,10 +22,15 @@ const platformSpecificConfig = Platform.select({
 const SignUpStack = createStackNavigator(
   {
     SignUp: SignUpHomeScreen,
+    Promotion: PromotionScreen,
+    Guarantee: GuaranteeScreen,
+    PrivacyPolicy: PrivacyPolicyScreen,
+    AddAddress: AddAddressScreen,
+    Congratulations: CongratulationsScreen,
   },
   {
     ...platformSpecificConfig,
-    initialRouteName: 'SignUp',
+    initialRouteName: 'AddAddress',
     defaultNavigationOptions: {
       headerTitle: 'Wonda Shop',
     },
@@ -31,10 +41,10 @@ SignUpStack.navigationOptions = ({ navigation }) => {
   const { routeName } = navigation.state.routes[navigation.state.index];
   let tabBarVisible;
 
-  if (routeName === 'SignUp') {
-    tabBarVisible = false;
-  } else {
+  if (routeName === 'SOME_ROUTE') {
     tabBarVisible = true;
+  } else {
+    tabBarVisible = false;
   }
 
   return {
