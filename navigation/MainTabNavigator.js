@@ -30,7 +30,7 @@ const SignUpStack = createStackNavigator(
   },
   {
     ...platformSpecificConfig,
-    initialRouteName: 'AddAddress',
+    initialRouteName: 'Promotion',
     defaultNavigationOptions: {
       headerTitle: 'Wonda Shop',
     },

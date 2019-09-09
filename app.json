@@ -10,7 +10,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
@@ -33,8 +33,8 @@
       }
     },
     "android": {
-      "package": "com.wonda.consumer.mobile.shop",
-      "versionCode": 1,
+      "package": "com.wonda.consumer.android.shop",
+      "versionCode": 3,
       "permissions": []
     }
   }

@@ -21,12 +21,12 @@
   },
   "dependencies": {
     "@expo/samples": "~3.0.3",
-    "@expo/vector-icons": "10.0.3",
+    "@expo/vector-icons": "10.0.5",
     "@react-navigation/web": "^1.0.0-alpha.9",
-    "expo": "34.0.1",
+    "expo": "34.0.4",
     "expo-asset": "6.0.0",
     "expo-constants": "6.0.0",
-    "expo-font": "6.0.0",
+    "expo-font": "6.0.1",
     "expo-web-browser": "6.0.0",
     "native-base": "2.13.4",
     "prop-types": "15.6.2",
@@ -63,7 +63,7 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kiddkevin00/wonda-shop.git"
+    "url": "git@github.com:New-Haven-Foods/wonda-shop.git"
   },
   "private": true
 }
